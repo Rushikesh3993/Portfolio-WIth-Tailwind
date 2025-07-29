@@ -42,8 +42,9 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2">
-                <ul class="space-y-2 font-medium">
+            <div id="mobile-menu"
+                class="md:hidden hidden absolute top-full left-0 w-full bg-gray-900 text-white px-6 py-4 space-y-4 shadow-lg z-40 transition-all duration-300 ease-in-out">
+                <ul class="space-y-4 font-medium text-center">
                     <li><a href="#home" class="block hover:text-indigo-400">Home</a></li>
                     <li><a href="#about" class="block hover:text-indigo-400">About</a></li>
                     <li><a href="#projects" class="block hover:text-indigo-400">Projects</a></li>
@@ -51,10 +52,11 @@
                 </ul>
 
                 <a href="Rushikesh_Mote_Resume.pdf" download
-                    class="block md:hidden bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded transition duration-300">
+                    class="block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded transition duration-300 text-center">
                     Download Resume
                 </a>
             </div>
+
         </div>
     </nav>
 
@@ -106,9 +108,13 @@
         </div>
     </section>
 
+    <hr>
+
     <!-- Education Section  -->
     <section id="education" class="bg-gray-100 text-gray-800 py-16 px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Education</h2>
         <div class="relative border-l-4 border-indigo-500 pl-10 space-y-12 max-w-2xl mx-auto">
+
 
             <!-- Timeline Entry -->
             <div class="relative">
@@ -127,6 +133,22 @@
                 <p class="mt-1 text-gray-700">CGPA: 7 / 10</p>
             </div>
 
+            <!-- Timeline Entry 2 -->
+            <div class="relative">
+                <!-- Dot -->
+                <div
+                    class="absolute -left-[2.125rem] top-1 w-6 h-6 bg-indigo-500 rounded-full border-4 border-white z-10">
+                </div>
+
+                <!-- Text -->
+                <h3 class="text-xl font-semibold">
+                    Higher Secondary Certificate (HSC) – Science Stream
+                </h3>
+                <p class="text-sm text-gray-500 italic">
+                    2019 - 2021 | Yashavantrao Chavan Institute of Science, Satara
+                </p>
+                <p class="mt-1 text-gray-700">Percentage: 83.17%</p>
+            </div>
         </div>
 
     </section>
@@ -134,7 +156,7 @@
 
 
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
