@@ -15,3 +15,29 @@
     100% { background-position: 0% 50%; }
   }
 }
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--tw-progress);
+  }
+}
+
+.animate-skillbar {
+  animation: fillBar 1.8s ease forwards;
+}
+
+
+.skill-bar {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+
+  .skill-badge {
+    @apply inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full font-medium;
+  }
+
+

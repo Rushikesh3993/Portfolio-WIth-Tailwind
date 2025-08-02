@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 
 </head>
@@ -14,34 +16,36 @@
 
     <!-- Navbar Start -->
     <nav class="bg-gray-900 text-white p-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- logo -->
-            <h1 class="text-2xl font-bold"><u><i>Rushikesh.dev</i></u></h1>
+        <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-y-4">
 
-            <!-- menu items of Navbar -->
-            <ul class="hidden md:flex space-x-6 font-medium justify-between">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold whitespace-nowrap">
+                <u><i>Rushikesh.dev</i></u>
+            </h1>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex flex-wrap items-center space-x-4 font-medium">
                 <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
                 <li><a href="#about" class="hover:text-indigo-400">About</a></li>
                 <li><a href="#education" class="hover:text-indigo-400">Education</a></li>
+                <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
                 <li><a href="#project" class="hover:text-indigo-400">Project</a></li>
                 <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
             </ul>
 
-            <!-- Download Button -->
+            <!-- Resume Button (Hidden on small screens) -->
             <a href="Rushikesh_Mote_Resume.pdf" download
-                class="hidden md:inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded transition duration-300">
+                class="hidden md:inline-block text-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded transition duration-300 whitespace-nowrap">
                 Download Resume
             </a>
 
-            <!-- Hamburger Icon -->
+            <!-- Hamburger Icon (Mobile only) -->
             <div class="md:hidden">
                 <button id="menu-btn">
                     <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-
-                    <!-- Close icon -->
                     <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -55,8 +59,9 @@
                 <ul class="space-y-4 font-medium text-center">
                     <li><a href="#home" class="block hover:text-indigo-400">Home</a></li>
                     <li><a href="#about" class="block hover:text-indigo-400">About</a></li>
-                    <li><a href="#education" class="hover:text-indigo-400">Education</a></li>
-                    <li><a href="#projects" class="block hover:text-indigo-400">Projects</a></li>
+                    <li><a href="#education" class="block hover:text-indigo-400">Education</a></li>
+                    <li><a href="#skills" class="block hover:text-indigo-400">Skills</a></li>
+                    <li><a href="#project" class="block hover:text-indigo-400">Project</a></li>
                     <li><a href="#contact" class="block hover:text-indigo-400">Contact</a></li>
                 </ul>
 
@@ -65,7 +70,6 @@
                     Download Resume
                 </a>
             </div>
-
         </div>
     </nav>
 
@@ -176,6 +180,81 @@
 
         </ol>
     </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-white py-16 px-4">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
+
+            <!-- Skill Item -->
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
+                        <i class="fab fa-html5 text-orange-500 text-xl"></i> HTML
+                    </span>
+                    <!-- <span class="text-sm font-medium text-gray-700">95%</span> -->
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" data-skill="95%"></div>
+                </div>
+            </div>
+
+            <!-- Add More Skills Below -->
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
+                        <i class="fab fa-css3-alt text-blue-500 text-xl"></i> CSS
+                    </span>
+                    <!-- <span class="text-sm font-medium text-gray-700">90%</span> -->
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="90%"></div>
+                </div>
+            </div>
+
+            <!-- bootstrap -->
+
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
+                        <i class="fab fa-bootstrap text-indigo-500 mr-2"></i> Bootstrap
+                    </span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="85%"></div>
+                </div>
+            </div>
+
+            <!-- Tailwind -->
+
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
+                        <i class="fas fa-code text-purple-500 mr-2"></i> Tailwind
+                    </span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="85%"></div>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+
+            <div class="mb-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
+                        <i class="fab fa-js text-yellow-500 mr-2"></i>JavaScript
+                    </span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3">
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="80%"></div>
+                </div>
+            </div>
+
+    </section>
+
+
+
 
 
 
