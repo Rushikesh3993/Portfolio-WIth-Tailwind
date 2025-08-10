@@ -10,9 +10,17 @@
   }
 
   @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }
 
@@ -20,6 +28,7 @@
   0% {
     width: 0%;
   }
+
   100% {
     width: var(--tw-progress);
   }
@@ -36,8 +45,17 @@
 }
 
 
-  .skill-badge {
-    @apply inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full font-medium;
+.skill-badge {
+  @apply inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full font-medium;
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
+}
 
-
+#typing-cursor {
+  animation: blink 1s step-end infinite;
+}

@@ -49,5 +49,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  // ---------- INFINITE TYPING EFFECT (TYPE -> PAUSE -> DELETE -> REPEAT) ----------
+  const typingEl = document.getElementById("typing");
+  if (typingEl) {
+    const text = "A Passionate Web Developer";          // text to type
+    // create inner spans for text + cursor (keeps markup clean)
+    typingEl.innerHTML = `<span id="typing-text" class="inline"></span><span id="typing-cursor" class="inline text-indigo-100 ml-1">|</span>`;
+
+    const textEl = document.getElementById("typing-text");
+    // const cursorEl = document.getElementById("typing-cursor"); // cursor styled by CSS above
+
+    let index = 0;
+    let isDeleting = false;
+
+    const TYPING_SPEED = 100;     // ms per char while typing
+    const DELETING_SPEED = 50;    // ms per char while deleting
+    const PAUSE_AFTER = 1200;     // pause after finished typing
+    const PAUSE_BEFORE = 600;     // pause before typing again after delete
+
+    function tick() {
+      if (!isDeleting) {
+        index++;
+        textEl.textContent = text.slice(0, index);
+      } else {
+        index--;
+        textEl.textContent = text.slice(0, index);
+      }
+
+      if (!isDeleting && index === text.length) {
+        // finished typing -> pause then start deleting
+        isDeleting = true;
+        setTimeout(tick, PAUSE_AFTER);
+      } else if (isDeleting && index === 0) {
+        // fully deleted -> pause then start typing again
+        isDeleting = false;
+        setTimeout(tick, PAUSE_BEFORE);
+      } else {
+        setTimeout(tick, isDeleting ? DELETING_SPEED : TYPING_SPEED);
+      }
+    }
+
+    // start the loop
+    tick();
+  }
+
 
 
