@@ -92,6 +92,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // start the loop
     tick();
   }
-
-
-
+new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 30,
+  loop: true,
+  speed: 800,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

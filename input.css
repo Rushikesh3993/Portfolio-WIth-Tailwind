@@ -59,3 +59,10 @@
 #typing-cursor {
   animation: blink 1s step-end infinite;
 }
+
+@media (min-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
