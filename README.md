@@ -82,6 +82,4 @@ npx tailwindcss -i ./input.css -o ./output.css --watch
 
 ---
 
-## 📄 License
 
-This project is **open-source** and available under the **MIT License**.
