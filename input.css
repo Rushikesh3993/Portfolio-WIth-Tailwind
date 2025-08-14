@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-
 @layer utilities {
+  /* Animated gradient for hero & contact sections */
   .animated-bg {
     background: linear-gradient(-45deg, #6366f1, #7e22ce, #0ea5e9, #22c55e);
     background-size: 400% 400%;
@@ -10,59 +10,58 @@
   }
 
   @keyframes gradientMove {
-    0% {
-      background-position: 0% 50%;
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Skill bar animation */
+  @keyframes fillBar {
+    0% { width: 0%; }
+    100% { width: var(--tw-progress); }
+  }
+
+  .animate-skillbar {
+    animation: fillBar 1.8s ease forwards;
+  }
+
+  .skill-bar {
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    background: linear-gradient(90deg, #6366f1, #0ea5e9); /* Gradient fill */
+  }
+
+  /* Skill badges */
+  .skill-badge {
+    @apply inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full font-medium;
+  }
+
+  /* Typing cursor blink */
+  @keyframes blink { 50% { opacity: 0; } }
+  #typing-cursor {
+    animation: blink 1s step-end infinite;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  /* Swiper mobile arrow fix */
+  @media (min-width: 640px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
     }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
   }
 }
 
-@keyframes fillBar {
-  0% {
-    width: 0%;
-  }
 
-  100% {
-    width: var(--tw-progress);
-  }
+#backToTop.show {
+  opacity: 1 !important;
+  scale: 1 !important;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.animate-skillbar {
-  animation: fillBar 1.8s ease forwards;
-}
-
-
-.skill-bar {
-  width: 0;
-  transition: width 1.5s ease-in-out;
-}
-
-
-.skill-badge {
-  @apply inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full font-medium;
-}
-
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-#typing-cursor {
-  animation: blink 1s step-end infinite;
-}
-
-@media (min-width: 640px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none !important;
-  }
+#backToTop.hide {
+  opacity: 0 !important;
+  scale: 0.9 !important;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }

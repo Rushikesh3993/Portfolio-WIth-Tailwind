@@ -4,83 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rushikesh.dev Portfolio</title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-
 </head>
 
 <body>
 
-    <!-- Navbar Start -->
-    <nav class="bg-gray-900 text-white p-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-y-4">
+ <!-- Navbar Start -->
+<nav class="bg-gray-900 text-white p-4 sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between items-center gap-y-4">
+        <h1 class="text-2xl font-bold whitespace-nowrap">
+            <u><i>Rushikesh.dev</i></u>
+        </h1>
 
-            <!-- Logo -->
-            <h1 class="text-2xl font-bold whitespace-nowrap">
-                <u><i>Rushikesh.dev</i></u>
-            </h1>
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex flex-wrap items-center space-x-4 font-medium">
+            <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
+            <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+            <li><a href="#education" class="hover:text-indigo-400">Education</a></li>
+            <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
+            <li><a href="#projects" class="hover:text-indigo-400">Project</a></li>
+            <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+        </ul>
 
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex flex-wrap items-center space-x-4 font-medium">
-                <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="#about" class="hover:text-indigo-400">About</a></li>
-                <li><a href="#education" class="hover:text-indigo-400">Education</a></li>
-                <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
-                <li><a href="#projects" class="hover:text-indigo-400">Project</a></li>
-                <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+        <!-- Resume Button (Hidden on small & tablet screens) -->
+        <a href="Rushikesh_Mote_Resume.pdf" download
+            class="hidden lg:inline-block text-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded transition duration-300 whitespace-nowrap">
+            Download Resume
+        </a>
+
+        <!-- Hamburger Icon (Mobile & Tablet only) -->
+        <div class="lg:hidden">
+            <button id="menu-btn">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="lg:hidden hidden absolute top-full left-0 w-full bg-gray-900 text-white px-6 py-4 space-y-4 shadow-lg z-40 transition-all duration-300 ease-in-out">
+            <ul class="space-y-4 font-medium text-center">
+                <li><a href="#home" class="block hover:text-indigo-400">Home</a></li>
+                <li><a href="#about" class="block hover:text-indigo-400">About</a></li>
+                <li><a href="#education" class="block hover:text-indigo-400">Education</a></li>
+                <li><a href="#skills" class="block hover:text-indigo-400">Skills</a></li>
+                <li><a href="#projects" class="block hover:text-indigo-400">Project</a></li>
+                <li><a href="#contact" class="block hover:text-indigo-400">Contact</a></li>
             </ul>
 
-            <!-- Resume Button (Hidden on small screens) -->
             <a href="Rushikesh_Mote_Resume.pdf" download
-                class="hidden md:inline-block text-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded transition duration-300 whitespace-nowrap">
+                class="block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded transition duration-300 text-center">
                 Download Resume
             </a>
-
-            <!-- Hamburger Icon (Mobile only) -->
-            <div class="md:hidden">
-                <button id="menu-btn">
-                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-                class="md:hidden hidden absolute top-full left-0 w-full bg-gray-900 text-white px-6 py-4 space-y-4 shadow-lg z-40 transition-all duration-300 ease-in-out">
-                <ul class="space-y-4 font-medium text-center">
-                    <li><a href="#home" class="block hover:text-indigo-400">Home</a></li>
-                    <li><a href="#about" class="block hover:text-indigo-400">About</a></li>
-                    <li><a href="#education" class="block hover:text-indigo-400">Education</a></li>
-                    <li><a href="#skills" class="block hover:text-indigo-400">Skills</a></li>
-                    <li><a href="#projects" class="block hover:text-indigo-400">Project</a></li>
-                    <li><a href="#contact" class="block hover:text-indigo-400">Contact</a></li>
-                </ul>
-
-                <a href="Rushikesh_Mote_Resume.pdf" download
-                    class="block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded transition duration-300 text-center">
-                    Download Resume
-                </a>
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
 
-    <!-- hero section -->
+    <!-- Hero Section -->
     <section id="home" class="relative text-white min-h-screen flex items-center overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full z-0 animated-bg"></div>
-        <div class="relative z-10 container mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-center">
+        <div class="relative z-10 container mx-auto text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-center drop-shadow-lg">
+
                 Hi, I'm Rushikesh Mote
             </h1>
 
@@ -97,25 +93,23 @@
         </div>
     </section>
 
-
-
-    <!-- About section  -->
-    <section id="about" class="bg-gray-100 text-gray-800 min-h-screen flex items-center px-4">
+    <!-- About Section -->
+    <section id="about"
+        class="bg-gradient-to-r from-indigo-100 to-blue-50 text-gray-800 min-h-screen flex items-center px-4">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
 
-            <!-- img  -->
+            <!-- Image -->
             <div class="w-full md:w-1/2">
                 <img src="https://img.freepik.com/fotos-premium/software-ingenieur-digitaler-avatar-generative-ki_934475-8997.jpg"
-                    alt="My Photo" class="rounded-lg shadow-xl/30 shadow-indigo-700  mx-auto ">
+                    alt="My Photo" class="rounded-lg shadow-xl/30 shadow-indigo-700 mx-auto">
             </div>
 
-            <!-- Text Content  -->
+            <!-- Text Content -->
             <div class="w-full md:w-1/2">
                 <h2 class="text-3xl font-bold border-b-4 border-indigo-500 inline-block pb-2 mb-4">About Me</h2>
-
                 <p class="text-gray-700 leading-relaxed mb-4">
                     I'm Rushikesh Mote, a passionate Web Developer learning to build modern, responsive websites using
-                    HTML, CSS, Tailwind, and JavaScript.</p>
+                    HTML, CSS, Tailwind, and JavaScript.
                 </p>
                 <p class="text-gray-700 leading-relaxed">
                     I enjoy building projects that help me grow and solve real-world problems. I’m continuously
@@ -128,18 +122,16 @@
     <hr>
 
     <!-- Education Section -->
-    <section id="education" class="bg-gray-100 text-gray-800 min-h-screen px-4 pt-16">
+    <section id="education" class="bg-gradient-to-r from-blue-50 to-indigo-100 text-gray-800 min-h-screen px-4 pt-16">
         <div class="text-center">
-            <h2 class="text-3xl font-bold mb-8 border-b-4 border-indigo-500 inline-block pb-2">
-                Education
-            </h2>
+            <h2 class="text-3xl font-bold mb-8 border-b-4 border-indigo-500 inline-block pb-2">Education</h2>
         </div>
-
 
         <div class="relative max-w-4xl mx-auto">
             <!-- Central line -->
             <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-indigo-500 h-full"></div>
 
+            <!-- Education entries -->
             <!-- Entry 1 -->
             <div class="mb-12 flex items-center w-full">
                 <div class="w-1/2 pr-8 text-right">
@@ -188,45 +180,35 @@
         </div>
     </section>
 
-
-
     <!-- Skills Section -->
-    <section id="skills" class="bg-white min-h-screen flex items-center px-4">
+    <section id="skills" class="bg-gradient-to-r from-indigo-50 to-blue-50 min-h-screen flex items-center px-4">
         <div class="container mx-auto max-w-3xl">
             <div class="text-center">
-                <h2 class="text-3xl font-bold mb-8 border-b-4 border-indigo-500 inline-block pb-2">
-                    Skills
-                </h2>
+                <h2 class="text-3xl font-bold mb-8 border-b-4 border-indigo-500 inline-block pb-2">Skills</h2>
             </div>
 
-
-            <!-- Skill Item -->
+            <!-- Skills List -->
             <div class="mb-6">
                 <div class="flex items-center justify-between mb-2">
                     <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
                         <i class="fab fa-html5 text-orange-500 text-xl"></i> HTML
                     </span>
-                    <!-- <span class="text-sm font-medium text-gray-700">95%</span> -->
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-3">
                     <div class="bg-indigo-500 h-3 rounded-full skill-bar" data-skill="95%"></div>
                 </div>
             </div>
 
-            <!-- Add More Skills Below -->
             <div class="mb-6">
                 <div class="flex items-center justify-between mb-2">
                     <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
                         <i class="fab fa-css3-alt text-blue-500 text-xl"></i> CSS
                     </span>
-                    <!-- <span class="text-sm font-medium text-gray-700">90%</span> -->
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-3">
-                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="90%"></div>
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" data-skill="90%"></div>
                 </div>
             </div>
-
-            <!-- bootstrap -->
 
             <div class="mb-6">
                 <div class="flex items-center justify-between mb-2">
@@ -235,11 +217,9 @@
                     </span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-3">
-                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="85%"></div>
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" data-skill="85%"></div>
                 </div>
             </div>
-
-            <!-- Tailwind -->
 
             <div class="mb-6">
                 <div class="flex items-center justify-between mb-2">
@@ -248,42 +228,35 @@
                     </span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-3">
-                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="85%"></div>
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" data-skill="85%"></div>
                 </div>
             </div>
-
-            <!-- JavaScript -->
 
             <div class="mb-6">
                 <div class="flex items-center justify-between mb-2">
                     <span class="flex items-center gap-2 text-lg font-semibold text-indigo-600">
-                        <i class="fab fa-js text-yellow-500 mr-2"></i>JavaScript
+                        <i class="fab fa-js text-yellow-500 mr-2"></i> JavaScript
                     </span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-3">
-                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" style="width: 0%;" data-skill="80%"></div>
+                    <div class="bg-indigo-500 h-3 rounded-full skill-bar" data-skill="80%"></div>
                 </div>
             </div>
+        </div>
     </section>
 
-
     <!-- Certifications Section -->
-
-    <section class="py-12">
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-12">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center">
-                <h2 class="text-3xl font-bold mb-8 border-b-4 border-indigo-500 inline-block pb-2">
-                    Certifications
-                </h2>
+                <h2 class="text-3xl font-bold mb-8 border-b-4 border-indigo-500 inline-block pb-2">Certifications</h2>
             </div>
-
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-
                     <!-- Slide 1 -->
                     <div class="swiper-slide flex flex-col items-center">
-                        <div class="overflow-hidden rounded-xl  transition-transform duration-300 hover:scale-105">
+                        <div class="overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105">
                             <img src="images/web_development.png" alt="Certificate 1"
                                 class="mx-auto w-full max-w-[800px] h-[400px] md:h-[450px] object-contain" />
                         </div>
@@ -295,7 +268,7 @@
 
                     <!-- Slide 2 -->
                     <div class="swiper-slide flex flex-col items-center">
-                        <div class="overflow-hidden rounded-xl  transition-transform duration-300 hover:scale-105">
+                        <div class="overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105">
                             <img src="images/core_java.png" alt="Certificate 2"
                                 class="mx-auto w-full max-w-[800px] h-[400px] md:h-[450px] object-contain" />
                         </div>
@@ -304,11 +277,11 @@
                             <p class="text-sm text-gray-500">Issued by Internshala</p>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Pagination -->
                 <div class="swiper-pagination mt-4"></div>
+
 
                 <!-- Mobile arrows only -->
                 <div class="swiper-button-prev sm:hidden"></div>
@@ -389,12 +362,6 @@
                     </div>
                 </div>
 
-
-
-
-
-
-
             </div>
         </div>
     </section>
@@ -403,9 +370,74 @@
 
 
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-500 to-teal-500 text-white mt-10">
+        <div class="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row gap-10">
+
+            <!-- Contact Info -->
+            <div class="md:w-1/2 flex flex-col justify-center space-y-6">
+                <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+                <p class="mb-6">I'd love to hear from you! Whether it's a project idea or just a friendly hello, feel
+                    free to reach out.</p>
+
+                <div class="space-y-4 text-lg">
+                    <p class="flex items-center gap-3"><i class="fas fa-envelope text-white text-xl"></i>
+                        moterushikesh39@gmail.com</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-phone text-white text-xl"></i> +91 7499034380
+                    </p>
+                    <p class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-white text-xl"></i> Satara,
+                        Maharashtra, India</p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-6 flex gap-6">
+                    <a href="https://github.com/Rushikesh3993" target="_blank"
+                        class="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full text-white text-2xl hover:bg-white hover:text-blue-600 hover:scale-110 transition transform duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rushikesh-mote-rm839/" target="_blank"
+                        class="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full text-white text-2xl hover:bg-white hover:text-blue-600 hover:scale-110 transition transform duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:moterushikesh39@gmail.com"
+                        class="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full text-white text-2xl hover:bg-white hover:text-blue-600 hover:scale-110 transition transform duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="md:w-1/2 flex flex-col justify-start">
+                <form id="contactForm" action="https://formsubmit.co/moterushikesh39@gmail.com" method="POST"
+                    class="space-y-6 mt-0 md:mt-6">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white text-black">
+                    <input type="email" name="email" placeholder="Your Email" required
+                        class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white text-black">
+                    <textarea name="message" placeholder="Your Message" required
+                        class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white text-black"></textarea>
+                    <button type="submit"
+                        class="w-full py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-gray-100 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+                <p id="formMessage" class="mt-4 text-lg hidden text-white">Your message has been sent! ✅</p>
+            </div>
+
+        </div>
+    </section>
 
 
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+        © 2025 Rushikesh Mote. All Rights Reserved.
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 bg-indigo-500 text-white p-4 rounded-4xl shadow-lg hidden z-50 transform transition duration-300 scale-90 opacity-0 hover:bg-indigo-600 hover:scale-105">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
